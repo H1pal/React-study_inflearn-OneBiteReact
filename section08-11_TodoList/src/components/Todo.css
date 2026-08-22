@@ -1,0 +1,122 @@
+:root {
+  --main: #1f93ff;
+  --alter: rgb(220, 220, 220);
+}
+
+.title {
+  padding-bottom: 10px;
+}
+
+#edit_form form {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+#input-todo {
+  flex: 1;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 5px;
+
+  padding: 15px;
+}
+
+#input-todo:focus {
+  outline: none;
+  border: 1px solid #1f93ff;
+}
+
+#bt-add {
+  cursor: pointer;
+  width: 80px;
+  border: none;
+  background-color: #1f93ff;
+  color: white;
+  border-radius: 5px;
+}
+
+#todo-count_container {
+  display: flex;
+}
+
+.count_content {
+  flex: 0.3 1 0%;
+}
+
+#input-search {
+  margin-bottom: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--alter);
+  padding: 15px 0;
+}
+
+#input-search:focus {
+  outline: none;
+  border: 1px solid var(--main);
+}
+
+#todoItemList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#todoitem_container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+#input-search {
+  padding: 15px;
+}
+
+.checkbox_col {
+  width: 20px;
+}
+
+.title_col {
+  flex: 1;
+  position: relative;
+}
+
+/* #span-content::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  z-index: 3;
+  text-decoration: line-through;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all linear 2s;
+}
+
+#span-content::before:hover {
+  width: 100%;
+} */
+
+.date_col {
+  font-style: 14px;
+  color: gray;
+}
+
+#bt-delete {
+  cursor: pointer;
+  color: gray;
+  font-style: 14px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  transition: background-color ease 0.2s;
+}
+
+#bt-delete:hover {
+  transition: none;
+  background-color: rgb(255, 29, 4);
+  color: aliceblue;
+}
