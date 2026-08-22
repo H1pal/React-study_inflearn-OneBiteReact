@@ -8,5 +8,9 @@
     "start": "node src/index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "randomcolor": "^0.6.2"
+  }
 }

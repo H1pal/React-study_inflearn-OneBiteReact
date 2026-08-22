@@ -1,0 +1,22 @@
+
+
+/* 배경 꾸미고 싶어서 만든 스타일 */
+#interactive-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(99, 102, 241, 0.15),
+    /* 중심부: 은은한 보라빛 조명 */ transparent 80% /* 외각: 투명하게 사라짐 */
+  );
+
+  /* 움직임이 부드럽게 이어지도록 트랜지션 추가 (선택) */
+  transition: background 0.1s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
