@@ -81,7 +81,7 @@ function TodoList() {
 
       <div id="todoItemList">
         {
-          // 5. 필터링된 배열을 순회하며 개별 TodoItem 컴포넌트로 변환하여 출력
+          // 필터링된 배열을 순회하며 개별 TodoItem 컴포넌트로 변환하여 출력
           // React가 각 요소를 식별하고 효율적으로 렌더링할 수 있도록 고유한 key(it.id)를 지정
           getSearchResult().map((td) => (
             <TodoItem key={td.id} {...td} />

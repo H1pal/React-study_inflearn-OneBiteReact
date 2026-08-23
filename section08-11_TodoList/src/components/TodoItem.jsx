@@ -2,7 +2,7 @@ import { useContext, memo } from "react";
 import { TodoDispatchContext } from "../App";
 import "./Todo.css";
 
-const TodoItem = ({ id, content, createDate, isDone }) => {
+const TodoItem = ({ id, content, timeStamp, isDone }) => {
   // Context에서 onUpdate 및 onDelete 함수 추출
   const { onUpdate, onDelete } = useContext(TodoDispatchContext);
 
@@ -32,9 +32,7 @@ const TodoItem = ({ id, content, createDate, isDone }) => {
           {content}
         </span>
       </div>
-      <div className="date_col">
-        {new Date(createDate).toLocaleDateString()}
-      </div>
+      <div className="date_col">{new Date(timeStamp).toLocaleDateString()}</div>
       <div className="btn_col">
         {/* 삭제 버튼 클릭 시 해당 아이템의 id를 넘겨주어 배열에서 제거 */}
         <button id="bt-delete" onClick={() => onDelete(id)}>

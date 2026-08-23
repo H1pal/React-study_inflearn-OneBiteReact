@@ -29,11 +29,18 @@ function reducer(state, action) {
   }
 }
 
+const mockData = {
+  id: 0,
+  content: "빨래하기",
+  timeStamp: new Date().getTime(),
+  isDone: true,
+};
+
 function App() {
   // const [todo, setTodo] = useState([]);
-  const [todo, setTodo] = useReducer(reducer, []);
+  const [todo, setTodo] = useReducer(reducer, [mockData]);
   // useReducer를 이용하여 setState의 다양한 종류 로직을 직관화
-  const idRef = useRef(0); // id를 ref로 관리
+  const idRef = useRef(1); // id를 ref로 관리
 
   const onCreate = (content) => {
     setTodo({
